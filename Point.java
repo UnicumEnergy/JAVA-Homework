@@ -1,19 +1,34 @@
- 
+ import java.awt.*; 
 
 
 public class Point extends GrObject implements ColorAble
 {
-    // instance variables - replace the example below with your own
-    private int thickness;
+   private int thickness;
 
     /**
      * Constructor for objects of class Point
      */
-    public Point(int thickness)
-    {
-       this.thickness=thickness;
-    }
+    
+    public Point(int thickness){
+        super ( id);
+        x=0;
+        y=0;
+        visibility=false;
+    }   
+  
 
-    abstract void printToConsole();
+    public void setColor(Color c){
+        this.color = c;
+    }
+    
+    public Color getColor(){
+        return this.color;
+        
+    }
+    
+    void printToConsole(){
+        System.out.println("blab bla");
+        
+    }
     
 }
